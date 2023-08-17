@@ -42,7 +42,7 @@ int main()
             }
             else if(op=='^')
             {
-                int pro = 1;
+                double pro = 1;
                 for(int i = 1; i <= n2; i++)
                     pro = pro * n1;
                 cout << "The value of " << n1 << " to the power " << n2 << " is " << pro << endl;
