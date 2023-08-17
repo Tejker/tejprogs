@@ -3,7 +3,6 @@ using namespace std;
 
 int main()
 {
-    int f = 0;
     char ct = 'Y';
     while(ct == 'Y')
     {
