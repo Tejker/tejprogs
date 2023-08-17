@@ -3,10 +3,10 @@ using namespace std;
 
 int main()
 {
+    cout << "Welcome to the Calculator!" << endl;
     char ct = 'Y';
     while(ct == 'Y')
-    {
-        cout << "Welcome to the Calculator!";
+    {     
         int ch = 0;
         double n1 = 0,n2 = 0;
         char op;
@@ -14,7 +14,7 @@ int main()
         cin >> ch;
         if(ch == 1)
         {
-            cout << "Enter two numbers for calculation: ";
+            cout << "Enter two numbers for calculation: " << endl;
             cin >> n1 >> n2;
             cout << "Enter Operator: ";
             cin >> op;
@@ -99,7 +99,6 @@ int main()
                         res = res * n1;
                         pro = pro * j;
                     }
-
                     res = res/pro;
                     sum1 = sum1 + res;
                 }
@@ -119,63 +118,66 @@ int main()
             }
             else if(op == 't')
             {
-                double sum1=0,sum2=0;
-                for(int i = 1; i<=41 ; i+=4)
+                if(n == 90)
+                    cout << "The result is: infinity" << endl;
+                else
                 {
-                    double res = 1,pro = 1;
-                    for(int j=1; j <= i; j++)
+                    double sum1=0,sum2=0;
+                    for(int i = 1; i<=41 ; i+=4)
                     {
-                        res = res * n1;
-                        pro = pro * j;
-                    }
+                        double res = 1,pro = 1;
+                        for(int j=1; j <= i; j++)
+                        {
+                            res = res * n1;
+                            pro = pro * j;
+                        }
 
-                    res = res/pro;
-                    sum1 = sum1 + res;
-                }
+                        res = res/pro;
+                        sum1 = sum1 + res;
+                    }
         
-                for(int i = 3; i<=39 ; i+=4)
-                {
-                    double res = 1,pro = 1;
-                    for(int j=1; j <= i; j++)
-                    {    
-                        res = res * n1;
-                        pro = pro * j;
-                    }
-                    res = res/pro;
-                    sum2 =sum2 + res;
-                }
-
-                double sum3=0,sum4=0;
-                for(int i = 0; i<=20 ; i+=4)
-                {
-                    double res = 1,pro = 1;
-                    for(int j=1; j <= i; j++)
+                    for(int i = 3; i<=39 ; i+=4)
                     {
-                        res = res * n1;
-                        pro = pro * j;
+                        double res = 1,pro = 1;
+                        for(int j=1; j <= i; j++)
+                        {    
+                            res = res * n1;
+                            pro = pro * j;
+                        }
+                        res = res/pro;
+                        sum2 =sum2 + res;
                     }
 
-                    res = res/pro;
-                    sum3 = sum3 + res;
-                }
+                    double sum3=0,sum4=0;
+                    for(int i = 0; i<=20 ; i+=4)
+                    {
+                        double res = 1,pro = 1;
+                        for(int j=1; j <= i; j++)
+                        {
+                            res = res * n1;
+                            pro = pro * j;
+                        }
+
+                        res = res/pro;
+                        sum3 = sum3 + res;
+                    }
         
-                for(int i = 2; i<=22 ; i+=4)
-                {
-                    double res = 1,pro = 1;
-                    for(int j=1; j <= i; j++)
-                    {    
-                        res = res * n1;
-                        pro = pro * j;
+                    for(int i = 2; i<=22 ; i+=4)
+                    {
+                        double res = 1,pro = 1;
+                        for(int j=1; j <= i; j++)
+                        {    
+                            res = res * n1;
+                            pro = pro * j;
+                        }
+                        res = res/pro;
+                        sum4 =sum4 + res;
                     }
-                    res = res/pro;
-                    sum4 =sum4 + res;
-                }
-                cout << "The resut is: " << (sum1 - sum2)/(sum3 - sum4) << endl;
-            }   
-
+                    cout << "The resut is: " << (sum1 - sum2)/(sum3 - sum4) << endl;
+                } 
+            }  
         }
         cout << "Press " << endl << "Y to continue" << endl << "N to end"<< endl;
-        cin>> ct;
-        
+        cin>> ct;       
     }
 }
